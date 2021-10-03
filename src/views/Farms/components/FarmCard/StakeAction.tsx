@@ -84,15 +84,15 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
       </Button>
     ) : (
       <IconButtonWrapper>
-        <IconButton variant="tertiary" onClick={onPresentWithdraw} mr="6px">
-          <MinusIcon color="textSubtle" width="14px" />
+        <IconButton variant="secondary" onClick={onPresentWithdraw} mr="6px">
+          <MinusIcon color="primary" width="14px" />
         </IconButton>
         <IconButton
-          variant="tertiary"
+          variant="secondary"
           onClick={onPresentDeposit}
           disabled={['history', 'archived'].some((item) => location.pathname.includes(item))}
         >
-          <AddIcon color="textSubtle" width="14px" />
+          <AddIcon color="primary" width="14px" />
         </IconButton>
       </IconButtonWrapper>
     )
@@ -102,7 +102,6 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
     <Flex justifyContent="space-between" alignItems="center">
       <Flex flexDirection="column" alignItems="flex-start">
         <Heading color={stakedBalance.eq(0) ? 'textDisabled' : 'text'}>{displayBalance()}</Heading>
-   
       </Flex>
       {renderStakingButtons()}
     </Flex>

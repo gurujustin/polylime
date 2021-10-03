@@ -118,7 +118,18 @@ const Row: React.FunctionComponent<RowPropsWithLoading> = (props) => {
                   <td key={key}>
                     <CellInner>
                       <CellLayout label={t('APR')}>
-                        <Apr {...props.apr} hideButton={isMobile} />
+                        <Apr
+                          value={props.apr.value}
+                          lpLabel={props.apr.lpLabel}
+                          tokenAddress={props.apr.tokenAddress}
+                          quoteTokenAddress={props.apr.quoteTokenAddress}
+                          cakePrice={props.apr.cakePrice}
+                          originalValue={props.apr.originalValue}
+                          pid={props.farm.pid}
+                          lpSymbol={props.details.lpSymbol}
+                          multiplier={props.apr.multiplier}
+                          hideButton={isMobile} 
+                        />
                       </CellLayout>
                     </CellInner>
                   </td>
@@ -161,7 +172,18 @@ const Row: React.FunctionComponent<RowPropsWithLoading> = (props) => {
             </EarnedMobileCell>
             <AprMobileCell>
               <CellLayout label={t('APR')}>
-                <Apr {...props.apr} hideButton />
+                <Apr
+                  value={props.apr.value}
+                  lpLabel={props.apr.lpLabel}
+                  tokenAddress={props.apr.tokenAddress}
+                  quoteTokenAddress={props.apr.quoteTokenAddress}
+                  cakePrice={props.apr.cakePrice}
+                  originalValue={props.apr.originalValue}
+                  pid={props.farm.pid}
+                  lpSymbol={props.details.lpSymbol}
+                  multiplier={props.apr.multiplier}
+                  hideButton={isMobile} 
+                />
               </CellLayout>
             </AprMobileCell>
            

@@ -16,6 +16,8 @@ export interface AprProps {
   cakePrice: BigNumber
   originalValue: number
   hideButton?: boolean
+  pid?: number
+  lpSymbol?: string
 }
 
 const Container = styled.div`
@@ -48,6 +50,9 @@ const Apr: React.FC<AprProps> = ({
   cakePrice,
   originalValue,
   hideButton = false,
+  pid,
+  lpSymbol,
+  multiplier
 }) => {
   let formattedAPR
   if (value) {
@@ -84,6 +89,9 @@ const Apr: React.FC<AprProps> = ({
           <AprWrapper>{formattedAPR}%</AprWrapper>
           {!hideButton && (
             <ApyButton
+              pid={pid}
+              lpSymbol={lpSymbol}
+              multiplier={multiplier}
               lpLabel={lpLabel}
               cakePrice={cakePrice}
               apr={originalValue}
