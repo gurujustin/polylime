@@ -3,41 +3,59 @@ import { Flex, TooltipText, IconButton, useModal, CalculateIcon, Skeleton, useTo
 import { useTranslation } from 'contexts/Localization'
 import Balance from 'components/Balance'
 import ApyCalculatorModal from 'components/ApyCalculatorModal'
+import RoiCalculatorModal from 'components/RoiCalculatorModal'
 import { Pool } from 'state/types'
 import { BASE_EXCHANGE_URL } from 'config'
-import { getAprData } from 'views/Pools/helpers'
+import { getAprDatav2 } from 'views/Pools/helpers'
 import BigNumber from 'bignumber.js'
+import { BIG_ZERO } from 'utils/bigNumber'
 
 interface AprRowProps {
   pool: Pool
+  stakedBalance: BigNumber
   performanceFee?: number
 }
 
-const AprRow: React.FC<AprRowProps> = ({ pool, performanceFee = 0 }) => {
+const AprRow: React.FC<AprRowProps> = ({ pool, stakedBalance, performanceFee = 0 }) => {
   const { t } = useTranslation()
-  const { stakingToken, earningToken, isFinished, apr, earningTokenPrice, isAutoVault } = pool
+  const { stakingToken, earningToken, isFinished, apr, earningTokenPrice, stakingTokenPrice, userData, isAutoVault } = pool
+
+  const stakingTokenBalance = userData?.stakingTokenBalance ? new BigNumber(userData.stakingTokenBalance) : BIG_ZERO
 
   const tooltipContent = isAutoVault
     ? t('APY includes compounding, APR doesn’t. This pool’s CHERRY is compounded automatically, so we show APY.')
     : t('This pool’s rewards aren’t compounded automatically, so we show APR')
 
   const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, { placement: 'bottom-start' })
+  
 
-  const { apr: earningsPercentageToDisplay, roundingDecimals, compoundFrequency } = getAprData(pool, performanceFee)
+  const { apr: earningsPercentageToDisplay, autoCompoundFrequency } = getAprDatav2(pool, performanceFee)
 
   const apyModalLink =
     stakingToken.address &&
     `${BASE_EXCHANGE_URL}/#/swap?outputCurrency=${stakingToken.address[process.env.REACT_APP_CHAIN_ID]}`
 
   const [onPresentApyModal] = useModal(
-    <ApyCalculatorModal
-      tokenPrice={earningTokenPrice}
+    // <ApyCalculatorModal
+    //   tokenPrice={earningTokenPrice}
+    //   apr={apr}
+    //   linkLabel={t('Get %symbol%', { symbol: stakingToken.symbol })}
+    //   linkHref={apyModalLink || BASE_EXCHANGE_URL}
+    //   earningTokenSymbol={earningToken.symbol}
+    //   roundingDecimals={roundingDecimals}
+    //   compoundFrequency={compoundFrequency}
+    //   performanceFee={performanceFee}
+    // />,
+    <RoiCalculatorModal
+      earningTokenPrice={earningTokenPrice}
+      stakingTokenPrice={stakingTokenPrice}
       apr={apr}
       linkLabel={t('Get %symbol%', { symbol: stakingToken.symbol })}
-      linkHref={apyModalLink || BASE_EXCHANGE_URL}
+      linkHref={apyModalLink}
+      stakingTokenBalance={stakedBalance.plus(stakingTokenBalance)}
+      stakingTokenSymbol={stakingToken.symbol}
       earningTokenSymbol={earningToken.symbol}
-      roundingDecimals={roundingDecimals}
-      compoundFrequency={compoundFrequency}
+      autoCompoundFrequency={autoCompoundFrequency}
       performanceFee={performanceFee}
     />,
   )
@@ -49,20 +67,22 @@ const AprRow: React.FC<AprRowProps> = ({ pool, performanceFee = 0 }) => {
     { value: 1e12, symbol: "T" },
     { value: 1e15, symbol: "P" },
   ];
-  let formatted = apr?.toLocaleString(undefined, {
+  let formatted = earningsPercentageToDisplay?.toLocaleString(undefined, {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })
-  formats.forEach(format => {
-    if(new BigNumber(apr).gt(format.value)){
-      formatted = new BigNumber(apr) && new BigNumber(apr).div(format.value).toNumber().toLocaleString(undefined, {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      })
-      const parts = formatted.match(/([\D]*)([\d.,]+)([\D]*)/)
-      formatted=`${parts[1]}${parts[2]}${format.symbol}${parts[3]}`
-    }
-  });
+  if (earningsPercentageToDisplay !== Infinity) {
+    formats.forEach(format => {
+      if(new BigNumber(earningsPercentageToDisplay).gt(format.value)){
+        formatted = new BigNumber(earningsPercentageToDisplay) && new BigNumber(earningsPercentageToDisplay).div(format.value).toNumber().toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        })
+        const parts = formatted.match(/([\D]*)([\d.,]+)([\D]*)/)
+        formatted=`${parts[1]}${parts[2]}${format.symbol}${parts[3]}`
+      }
+    });
+  }
 
   const formattedAPR = formatted
 
@@ -85,7 +105,7 @@ const AprRow: React.FC<AprRowProps> = ({ pool, performanceFee = 0 }) => {
             bold
           /> */}
           <IconButton onClick={onPresentApyModal} variant="text" scale="sm">
-            <CalculateIcon color="textSubtle" width="18px" />
+            <CalculateIcon color="success" width="18px" />
           </IconButton>
         </Flex>
       )}

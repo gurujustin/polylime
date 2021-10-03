@@ -1,6 +1,7 @@
 import BigNumber from 'bignumber.js'
 import { Pool } from 'state/types'
-import { getRoi, tokenEarnedPerThousandDollarsCompounding } from 'utils/compoundApyHelpers'
+// import { getRoi, tokenEarnedPerThousandDollarsCompounding } from 'utils/compoundApyHelpers'
+import { getApy, getRoi, tokenEarnedPerThousandDollarsCompounding } from 'utils/compoundApyHelpers'
 import { getBalanceNumber, getFullDisplayBalance, getDecimalAmount } from 'utils/formatBalance'
 
 export const convertSharesToCake = (
@@ -61,6 +62,22 @@ export const getAprData = (pool: Pool, performanceFee: number) => {
     return { apr: autoApr, isHighValueToken, roundingDecimals, compoundFrequency }
   }
   return { apr, isHighValueToken, roundingDecimals, compoundFrequency }
+}
+
+const AUTO_VAULT_COMPOUND_FREQUENCYV2 = 5000
+const MANUAL_POOL_AUTO_COMPOUND_FREQUENCY = 0
+
+export const getAprDatav2 = (pool: Pool, performanceFee: number) => {
+  const { isAutoVault, apr } = pool
+
+  //   Estimate & manual for now. 288 = once every 5 mins. We can change once we have a better sense of this
+  const autoCompoundFrequency = isAutoVault ? AUTO_VAULT_COMPOUND_FREQUENCYV2 : MANUAL_POOL_AUTO_COMPOUND_FREQUENCY
+
+  if (isAutoVault) {
+    const autoApr = getApy(apr, AUTO_VAULT_COMPOUND_FREQUENCYV2, 365, performanceFee) * 100
+    return { apr: autoApr, autoCompoundFrequency }
+  }
+  return { apr, autoCompoundFrequency }
 }
 
 export const getCakeVaultEarnings = (
