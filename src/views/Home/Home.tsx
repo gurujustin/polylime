@@ -26,7 +26,7 @@ const Hero = styled.div`
   flex-direction: column;
   margin: auto;
   margin-bottom: 32px;
-  padding-top: 156px;
+  padding-top: 32px;
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {

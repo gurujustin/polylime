@@ -81,5 +81,6 @@ export { default as RefreshIcon } from "./Icons/Refresh";
 export { default as SunIcon } from "./Icons/Sun";
 export { default as MoonIcon } from "./Icons/Moon";
 export { default as PencilIcon } from "./Icons/Pencil";
+export { default as MoreHorizontalIcon } from "./Icons/MoreHorizontal";
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

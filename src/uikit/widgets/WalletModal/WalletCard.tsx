@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text/Text";
 import { connectorLocalStorageKey } from "./config";
@@ -11,12 +12,22 @@ interface Props {
   mb: string;
 }
 
+const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: "16px" })`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
   const { title, icon: Icon } = walletConfig;
   return (
-    <Button
+    <WalletButton
       width="100%"
-      variant="tertiary"
+      variant="secondary"
       onClick={() => {
         login(walletConfig.connectorId);
         window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
@@ -26,11 +37,11 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Text bold color="#fff" mr="16px">
+      <Text color="text" fontSize="14px" mb="8px">
         {title}
       </Text>
       <Icon width="32px" />
-    </Button>
+    </WalletButton>
   );
 };
 

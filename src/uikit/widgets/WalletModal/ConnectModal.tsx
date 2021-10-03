@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "../../components/Link";
 import { HelpIcon } from "../../components/Svg";
+import Grid from "../../components/Box/Grid";
 import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config from "./config";
@@ -21,15 +22,17 @@ const HelpLink = styled(Link)`
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
   <Modal title="Connect to a wallet" onDismiss={onDismiss}>
-    {config.map((entry, index) => (
+    <Grid gridTemplateColumns="1fr 1fr">
+    {config.map((entry) => (
       <WalletCard
         key={entry.title}
         login={login}
         walletConfig={entry}
         onDismiss={onDismiss}
-        mb={index < config.length - 1 ? "8px" : "0"}
+        mb="16px"
       />
     ))}
+    </Grid>
     {/* <HelpLink href="https://docs.pancakeswap.finance/get-started/connection-guide" external>
       <HelpIcon color="primary" mr="6px" />
       Learn how to connect
