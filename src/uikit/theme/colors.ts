@@ -1,0 +1,80 @@
+import { Colors } from "./types";
+
+export const baseColors = {
+  failure: "#ED4B9E",
+  primary: "#48bb78",
+  primaryBright: "#1ac486",
+  primaryDark: "#0098A1",
+  secondary: "#7645D9",
+  success: "#1ac486",
+  warning: "#FFB237",
+};
+
+export const additionalColors = {
+  binance: "#F0B90B",
+  overlay: "#0000007a",
+};
+
+export const lightColors: Colors = {
+  ...baseColors,
+  ...additionalColors,
+  secondary: "#1ac486",
+  background: "#FAF9FA",
+  backgroundDisabled: "#E9EAEB",
+  backgroundAlt: "#FFFFFF",
+  cardBorder: "#E7E3EB",
+  contrast: "white",
+  dropdown: "#F6F6F6",
+  dropdownDeep: "#EEEEEE",
+  invertedContrast: "#FFFFFF",
+  input: "#eeeaf4",
+  inputSecondary: "#d7caec",
+  tertiary: "#eff2f5",
+  text: "#242424",
+  textDisabled: "#BDC2C4",
+  textSubtle: "#4a5568",
+  disabled: "#E9EAEB",
+  gradients: {
+    bubblegum: "linear-gradient(139.73deg, #E5FDFF 0%, #F3EFFF 100%)",
+    inverseBubblegum: "linear-gradient(139.73deg, #F3EFFF 0%, #E5FDFF 100%)",
+    cardHeader: "linear-gradient(111.68deg, #F2ECF2 0%, #E8F2F6 100%)",
+    vaultHeader: "linear-gradient(357deg,#eeeaf4 0%,#e8faff 100%)",
+    blue: "linear-gradient(180deg, #A7E8F1 0%, #94E1F2 100%)",
+    violet: "linear-gradient(180deg, #E2C9FB 0%, #CDB8FA 100%)",
+    violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
+    gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
+  },
+};
+
+export const darkColors: Colors = {
+  ...baseColors,
+  ...additionalColors,
+  secondary: "#1ac486",
+  background: "#171923",
+  backgroundDisabled: "#4a5568",
+  backgroundAlt: "#1a202c",
+  cardBorder: "#161a22",
+  contrast: "#FFFFFF",
+  dropdown: "#2d3748",
+  dropdownDeep: "#100C18",
+  invertedContrast: "#191326",
+  input: "#2d3748",
+  inputSecondary: "#262130",
+  primaryDark: "#0098A1",
+  tertiary: "#353547",
+  text: "#F4EEFF",
+  textDisabled: "#7c8083",
+  textSubtle: "#718096",
+  disabled: "#4a5568",
+  gradients: {
+    bubblegum: "linear-gradient(244deg,#2c3e50 0%,#181a28 100%)",
+    // bubblegum: "linear-gradient(309deg,#2c3040 0%,#1d202e 100%)",
+    inverseBubblegum: "linear-gradient(152deg,rgb(71 68 94) 0%,rgb(64 57 46) 100%)",
+    cardHeader: "linear-gradient(166.77deg, rgb(59, 65, 85) 0%, rgb(58, 48, 69) 100%)",
+    vaultHeader: "linear-gradient(22deg,#2e4052 0%,#4e444d 100%)",
+    blue: "linear-gradient(180deg, #00707F 0%, #19778C 100%)",
+    violet: "linear-gradient(180deg, #6C4999 0%, #6D4DB2 100%)",
+    violetAlt: "linear-gradient(180deg, #434575 0%, #66578D 100%)",
+    gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
+  },
+};
