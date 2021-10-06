@@ -63,7 +63,7 @@ export const usePollCoreFarmData = () => {
   const { fastRefresh } = useRefresh()
 
   useEffect(() => {
-    dispatch(fetchFarmsPublicDataAsync([19, 17]))
+    dispatch(fetchFarmsPublicDataAsync([3, 22]))
   }, [dispatch, fastRefresh])
 }
 
