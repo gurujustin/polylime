@@ -59,9 +59,13 @@ const EarnAPRPoolCard = () => {
     if (cakePrice.gt(0)) {
       const aprs = farms.map((farm) => {
         // Filter inactive farms, because their theoretical APR is super high. In practice, it's 0.
-        if (farm.pid !== 0 && farm.multiplier !== '0X' && farm.lpTotalInQuoteToken && farm.quoteToken.busdPrice && prices) {
-
-          const  price = prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
+        if (farm.multiplier !== '0X' && farm.lpTotalInQuoteToken && farm.quoteToken.busdPrice && prices) {
+          let price
+          if (farm.pid === 0) {
+            price = cakePrice
+          } else {
+            price = prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
+          }
           const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(price)
           const { cakeRewardsApr, lpRewardsApr } = getFarmApr(
             new BigNumber(farm.poolWeight),
