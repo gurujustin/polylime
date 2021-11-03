@@ -44,7 +44,7 @@ const App: React.FC = () => {
   const { toastSuccess} = useToast()
   const v = Math.random();
   if (v < 0.3 && !didAskToJoinTelegram){
-    const action = {text:"Join now", url:"https://t.me/polycherryfinance"}
+    const action = {text:"Join now", url:"https://t.me/polylimefinance"}
     toastSuccess("Have you joined our Telegram community?", "Come chat with us!", action);
   }
   didAskToJoinTelegram = true;

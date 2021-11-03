@@ -153,12 +153,12 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    href: "https://t.me/polylime",
+    href: "https://t.me/polylimefinance",
   },
   {
     label: "Twitter",
     icon: "TwitterIcon",
-    href: "https://twitter.com/polylime",
+    href: "https://twitter.com/polylimefinance",
   },
 ];
 
