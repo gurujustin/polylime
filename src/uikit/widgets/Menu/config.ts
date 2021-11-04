@@ -148,7 +148,7 @@ export const socials = [
   {
     label: "Docs",
     icon: "BookIcon",
-    href: "https://docs.polylime.com",
+    href: "https://docs.polylime.finance",
   },
   {
     label: "Telegram",

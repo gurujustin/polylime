@@ -109,11 +109,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/',
+        href: 'https://github.com/polylime',
       },
       {
         label: t('Docs'),
-        href: 'https://docs.polycherry.com',
+        href: 'https://docs.polylime.finance',
       },
    
      
