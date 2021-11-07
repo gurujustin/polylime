@@ -36,12 +36,13 @@ const StyledCardAccent1 = styled.div`
   background: ${({ theme }) => `linear-gradient(180deg, ${theme.colors.primaryBright}, ${theme.colors.secondary})`};
   background-size: 400% 400%;
   animation: ${AccentGradient} 2s linear infinite;
-  border-radius: 32px;
+  border-radius: 24px;
   position: absolute;
   top: -1px;
   right: -1px;
   bottom: -3px;
   left: -1px;
+  filter: blur(3px);
   z-index: -1;
 `
 
@@ -81,6 +82,7 @@ const FCard = styled.div<{ isPromotedFarm: boolean }>`
   // padding: 24px;
   position: relative;
   text-align: center;
+  max-width: 352px;
 `
 
 const Divider = styled.div`
@@ -159,7 +161,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePric
   const depositFee = new BigNumber(farm.depositFee).div(100);
   return (
     <FCard isPromotedFarm={isPromotedFarm}>
-      {isPromotedFarm && <StyledCardAccent />}
+      {isPromotedFarm && <StyledCardAccent1 />}
       <CardHeading
         lpLabel={lpLabel}
         singleToken={farm.singleToken}
