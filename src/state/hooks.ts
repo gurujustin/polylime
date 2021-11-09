@@ -101,10 +101,10 @@ export const useFarmUser = (pid) => {
   const farm = useFarmFromPid(pid)
 
   return {
-    allowance: farm.userData ? new BigNumber(farm.userData.allowance) : BIG_ZERO,
-    tokenBalance: farm.userData ? new BigNumber(farm.userData.tokenBalance) : BIG_ZERO,
-    stakedBalance: farm.userData ? new BigNumber(farm.userData.stakedBalance) : BIG_ZERO,
-    earnings: farm.userData ? new BigNumber(farm.userData.earnings) : BIG_ZERO,
+    allowance: farm?.userData ? new BigNumber(farm?.userData.allowance) : BIG_ZERO,
+    tokenBalance: farm?.userData ? new BigNumber(farm?.userData.tokenBalance) : BIG_ZERO,
+    stakedBalance: farm?.userData ? new BigNumber(farm?.userData.stakedBalance) : BIG_ZERO,
+    earnings: farm?.userData ? new BigNumber(farm?.userData.earnings) : BIG_ZERO,
   }
 }
 
@@ -128,7 +128,13 @@ export const useBusdPriceFromToken = (tokenSymbol: string): BigNumber => {
 }
 
 export const useLpTokenPrice = (symbol: string) => {
-  const farm = useFarmFromLpSymbol(symbol)
+  let sym
+  if (symbol === undefined) {
+    sym = 'LIME'
+  } else {
+    sym = symbol
+  }
+  const farm = useFarmFromLpSymbol(sym)
   const farmTokenPriceInUsd = useBusdPriceFromPid(farm.pid)
   let lpTokenPrice = BIG_ZERO
 
@@ -348,18 +354,11 @@ export const useTotalValue = (): BigNumber => {
   let value = new BigNumber(0);
   farms.data.forEach((farm) => {
     if (farm && farm.lpTotalInQuoteToken  && prices) {
-      
-    
-
-		const quoteTokenPriceUsd = prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
-		
-        const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd) 
-	
+		const quoteTokenPriceUsd = farm.pid === 0 ? lkmPrice : prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
+    const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd) 
     if (totalLiquidity.toNumber() > 0)
-		value = value.plus(totalLiquidity);
-
-    
-}
+		  value = value.plus(totalLiquidity);
+    }
   })
   // const { account } = useWeb3React()
   // const pools = usePools(account)

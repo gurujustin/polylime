@@ -19,6 +19,7 @@ export interface ApyButtonProps {
 
 const ApyButton: React.FC<ApyButtonProps> = ({ pid, lpSymbol, multiplier, lpLabel, cakePrice, apr, displayApr, addLiquidityUrl }) => {
   const { t } = useTranslation()
+  // console.log('debug5', pid, lpSymbol, multiplier, lpLabel, cakePrice, apr, displayApr, addLiquidityUrl)
   const lpPrice = useLpTokenPrice(lpSymbol)
   const { tokenBalance, stakedBalance } = useFarmUser(pid)
   const [onPresentApyModal] = useModal(
