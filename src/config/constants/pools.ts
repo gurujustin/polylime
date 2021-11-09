@@ -8,44 +8,44 @@ const pools: PoolConfig[] = [
     earningToken: tokens.cake,
     contractAddress: {
       97: '',
-      137: '0xd5898cA8A4bF89B3DEd3404df5B931ed0b9a443b',
+      137: '0x55181c30B620bbE2ac5E7f28fbB5458515DCbA05',
     },
     poolCategory: PoolCategory.CORE,
     harvest: true,
-    tokenPerBlock: '1',
+    tokenPerBlock: '0.001277955271564',
     sortOrder: 1,
     isFinished: false,
   },
-  {
-	sousId: 1,
-	stakingToken: tokens.cake,
-	earningToken: tokens.usdc,
-	contractAddress: {
-	  97: '', // let empty
-	  137: '0x38683555B7A7bA4C97204FC070bb4F1416d22dc4',
-	},
-	poolCategory: PoolCategory.CORE,
-	harvest: true,
-	tokenPerBlock: '1000000000000',
-	sortOrder: 1,
-	isFinished: false,
+//   {
+// 	sousId: 1,
+// 	stakingToken: tokens.cake,
+// 	earningToken: tokens.usdc,
+// 	contractAddress: {
+// 	  97: '', // let empty
+// 	  137: '0x38683555B7A7bA4C97204FC070bb4F1416d22dc4',
+// 	},
+// 	poolCategory: PoolCategory.CORE,
+// 	harvest: true,
+// 	tokenPerBlock: '1000000000000',
+// 	sortOrder: 1,
+// 	isFinished: false,
 	
- },
- {
- sousId: 2,
- stakingToken: tokens.cake,
- earningToken: tokens.usdt,
- contractAddress: {
-   97: '', // let empty
-   137: '0x72d6eD9b7ACED3C542cba59C4970752d162a1ac5',
- },
- poolCategory: PoolCategory.CORE,
- harvest: true,
- tokenPerBlock: '0.02',
- sortOrder: 2,
- isFinished: false,
+//  },
+//  {
+//  sousId: 2,
+//  stakingToken: tokens.cake,
+//  earningToken: tokens.usdt,
+//  contractAddress: {
+//    97: '', // let empty
+//    137: '0x72d6eD9b7ACED3C542cba59C4970752d162a1ac5',
+//  },
+//  poolCategory: PoolCategory.CORE,
+//  harvest: true,
+//  tokenPerBlock: '0.02',
+//  sortOrder: 2,
+//  isFinished: false,
  
-},
+// },
 //    {
 // 		sousId: 2,
 // 		stakingToken: tokens.cake,

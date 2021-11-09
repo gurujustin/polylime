@@ -67,7 +67,7 @@ const Pools: React.FC<PropsPools> = (props) => {
   const [numberOfPoolsVisible, setNumberOfPoolsVisible] = useState(NUMBER_OF_POOLS_VISIBLE)
   const [observerIsSet, setObserverIsSet] = useState(false)
   const loadMoreRef = useRef<HTMLDivElement>(null)
-  const [viewMode, setViewMode] = usePersistState(ViewMode.CARD, { localStorageKey: 'cherry_farm_view' })
+  const [viewMode, setViewMode] = usePersistState(ViewMode.CARD, { localStorageKey: 'lime_farm_view' })
   const [searchQuery, setSearchQuery] = useState('')
   const [sortOption, setSortOption] = useState('hot')
   const {
@@ -208,7 +208,7 @@ const Pools: React.FC<PropsPools> = (props) => {
     <CardLayout>
       {listPools.map((pool) =>
         pool.isAutoVault ? (
-          <CakeVaultCard key="auto-cherry" pool={pool} showStakedOnly={stakedOnly} />
+          <CakeVaultCard key="auto-lime" pool={pool} showStakedOnly={stakedOnly} />
         ) :  (
           <PoolCard key={pool.sousId} pool={pool} account={account} />
         ) 
@@ -224,10 +224,10 @@ const Pools: React.FC<PropsPools> = (props) => {
         <Flex justifyContent="space-between" flexDirection={['column', null, null, 'row']}>
           <Flex flex="2" flexDirection="column" mr={['8px', 0]}>
             <Heading as="h1" scale="xxl" color="secondary" mb="24px">
-              {autopool ? 'Auto Cherry' : t('Dividends')}
+              {autopool ? 'Auto Lime' : t('Dividends')}
             </Heading>
             <Heading scale="md" color="text">
-              {autopool ? 'Stake ONCE, earn FOREVER' : t('Stake CHERRY to earn USDC, DAI, USDT, and many other tokens')}
+              {autopool ? 'Stake ONCE, earn FOREVER' : t('Stake LIME to earn USDC, DAI, USDT, and many other tokens')}
             </Heading>
             <Heading scale="md" color="text">
               {autopool ? null : t('No Fee, high APR, low risk')}

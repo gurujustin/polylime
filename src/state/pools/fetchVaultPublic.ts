@@ -11,14 +11,14 @@ export const fetchPublicVaultData = async () => {
     const calls = [
       'getPricePerFullShare',
       'totalShares',
-      'calculateHarvestCherryRewards',
-      'calculateTotalPendingCherryRewards',
+      'calculateHarvestLimeRewards',
+      'calculateTotalPendingLimeRewards',
     ].map((method) => ({
       address: getCakeVaultAddress(),
       name: method,
     }))
 
-    const [[sharePrice], [shares], [estimatedCakeBountyReward], [totalpendingCherryHarvest]] = await multicall(
+    const [[sharePrice], [shares], [estimatedCakeBountyReward], [totalpendingLimeHarvest]] = await multicall(
       cakeVaultAbi,
       calls,
     )
@@ -31,7 +31,7 @@ export const fetchPublicVaultData = async () => {
       pricePerFullShare: sharePriceAsBigNumber.toJSON(),
       totalCakeInVault: totalCakeInVaultEstimate.cakeAsBigNumber.toJSON(),
       estimatedCakeBountyReward: new BigNumber(estimatedCakeBountyReward.toString()).toJSON(),
-      totalpendingCherryHarvest: new BigNumber(totalpendingCherryHarvest.toString()).toJSON(),
+      totalpendingLimeHarvest: new BigNumber(totalpendingLimeHarvest.toString()).toJSON(),
     }
   } catch (error) {
     return {
@@ -39,7 +39,7 @@ export const fetchPublicVaultData = async () => {
       pricePerFullShare: null,
       totalCakeInVault: null,
       estimatedCakeBountyReward: null,
-      totalpendingCherryHarvest: null,
+      totalpendingLimeHarvest: null,
     }
   }
 }

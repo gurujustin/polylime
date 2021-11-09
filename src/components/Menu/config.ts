@@ -11,8 +11,8 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   //       href: 'https://polywise.finance/',
   //     },
   //     {
-  //       label: 'Layer 2 - PolyCherry',
-  //       href: 'https://polycherry.finance/',
+  //       label: 'Layer 2 - PolyLime',
+  //       href: 'https://polylime.finance/',
   //     },
   //   ],
   // },
@@ -27,11 +27,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: "Exchange",
-        href: "https://quickswap.exchange/#/swap?outputCurrency=0xbD01698Ab485A7b8092A4e32B9c8B1939F6D2708",
+        href: "https://quickswap.exchange/#/swap?outputCurrency=0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d",
       },
       {
         label: "Liquidity",
-        href:"https://quickswap.exchange/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0xbD01698Ab485A7b8092A4e32B9c8B1939F6D2708"
+        href:"https://quickswap.exchange/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d"
       },
      
     ],
@@ -47,15 +47,15 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     href: '/pools',
   },
   {
-    label: t('Auto Cherry'),
+    label: t('Auto Lime'),
     icon: 'IfoIcon',
-    href: '/poolscherry',
+    href: '/poolslime',
   },
-  {
-    label: t('Dividends'),
-    icon: 'BondsIcon',
-    href: '/dividends',
-  },
+  // {
+  //   label: t('Dividends'),
+  //   icon: 'BondsIcon',
+  //   href: '/dividends',
+  // },
   {
     label: t('Referral'),
     icon: 'GroupsIcon',
@@ -67,19 +67,19 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'QuickChart',
-        href: 'https://quickchart.app/token/0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2',
+        href: 'https://quickchart.app/token/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
       },
       {
         label: 'DexGuru',
-        href: 'https://dex.guru/token/0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2-polygon',
+        href: 'https://dex.guru/token/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d-polygon',
       },
       {
         label: 'PolyChart',
-        href: 'https://app.polychart.io/explorer/polygon/0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2',
+        href: 'https://app.polychart.io/explorer/polygon/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
       },
       {
         label: 'Poocoin',
-        href: 'https://polygon.poocoin.app/tokens/0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2',
+        href: 'https://polygon.poocoin.app/tokens/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
       },
     ],
   },
@@ -89,7 +89,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'Dappradar',
-        href: 'https://dappradar.com/polygon/defi/polycherry',
+        href: 'https://dappradar.com/polygon/defi/polylime',
       },
       {
         label: 'PolyPup UI',
@@ -98,7 +98,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       
       {
         label: 'VFAT',
-        href: 'https://vfat.tools/polygon/polycherry',
+        href: 'https://vfat.tools/polygon/polylime',
       },
      
     ],
@@ -122,7 +122,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
   // {
   //   label:'Audited by Quillaudits',
   //   icon:'AuditIcon',
-  //   href:'https://github.com/polycherry/audits'
+  //   href:'https://github.com/polylime/audits'
   // }
 
 ]

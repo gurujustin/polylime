@@ -274,7 +274,7 @@ const ActionPanel: React.FC<ActionPanelProps> = ({ account, pool, userDataLoaded
       <ActionContainer>
         {showSubtitle && (
           <Text mt="4px" mb="16px" color="textSubtle">
-            {isAutoVault ? t('Automatic restaking') : `${t('Earn')} CHERRY ${t('Stake').toLocaleLowerCase()} CHERRY`}
+            {isAutoVault ? t('Automatic restaking') : `${t('Earn')} LIME ${t('Stake').toLocaleLowerCase()} LIME`}
           </Text>
         )}
         <Harvest {...pool} userDataLoaded={userDataLoaded} />

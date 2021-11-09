@@ -41,7 +41,7 @@ const CakeStats = () => {
     <StyledCakeStats>
       <CardBody>
         <Heading scale="xl" mb="24px">
-          {t('CHERRY Stats')}
+          {t('LIME Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">{t('MarketCap')}</Text>
@@ -60,12 +60,12 @@ const CakeStats = () => {
           {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{t('New CHERRY/block')}</Text>
+          <Text fontSize="14px">{t('New LIME/block')}</Text>
           <Text bold fontSize="14px">{eggPerBlock}</Text>
         </Row>
         <Row>
           <Text fontSize="14px">{t('Max Supply')}</Text>
-          <Text bold fontSize="14px">6000 CHERRY</Text>
+          <Text bold fontSize="14px">6400 LIME</Text>
         </Row>
       </CardBody>
     </StyledCakeStats>

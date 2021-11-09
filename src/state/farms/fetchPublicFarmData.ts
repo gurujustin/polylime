@@ -96,7 +96,7 @@ const fetchFarm = async (farm: Farm): Promise<PublicFarmData> => {
           },
           {
             address: getMasterChefAddress(),
-            name: 'CherryPerBlock',
+            name: 'LimePerBlock',
           },
         ])
       : [null, null]

@@ -79,7 +79,7 @@ const ClaimGift: React.FC<ClaimGiftProps> = ({ onSuccess, onDismiss }) => {
           onClick={handleClick}
           disabled={!canClaim}
         >
-          {t('Claim Your CHERRY')}
+          {t('Claim Your LIME')}
         </Button>
       </div>
     </Modal>

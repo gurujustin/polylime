@@ -42,7 +42,7 @@ const PanelBody: React.FC<Props> = ({ isPushed, pushNav, isMobile, links }) => {
         if (entry.label.includes('Chart')) {
           iconElement = <Timeline style={{width:'24px', marginRight:'16px'}} />
         }
-        if (entry.label.includes('Cherry')) {
+        if (entry.label.includes('Lime')) {
           iconElement = <Autorenew style={{width:'24px', marginRight:'16px'}} />
         }
         if (entry.label.includes('Audit')) {

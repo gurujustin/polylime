@@ -18,7 +18,7 @@ import rot13 from '../../utils/encode'
 
 const Hero = styled.div`
   align-items: center;
-  // background-image: url('/images/cherry.png');
+  // background-image: url('/images/lime.png');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -30,7 +30,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    // background-image: url('/images/cherry.png'), url('/images/egg/3b.png');
+    // background-image: url('/images/lime.png'), url('/images/egg/3b.png');
     background-position: left center, right center;
     height: 165px;
     padding-top: 0;
@@ -74,15 +74,15 @@ const Home: React.FC = () => {
     }
   }
   const { isDark } = useTheme()
-  const image = isDark ? '/images/cherrydark.png' : '/images/cherrywhite.png'
+  const image = isDark ? '/images/limedark.png' : '/images/limewhite.png'
   return (
     <Page>
       <Hero>
         <Image src={image} alt='logo' width={435} height={100}  />
         {/* <Heading as="h1" scale="xl" mb="18px" color="secondary" style={{textAlign:'center'}}>
-          PolyCherry
+          PolyLime
         </Heading>
-        <Text>CHERRY Token has already been launched</Text>
+        <Text>LIME Token has already been launched</Text>
         <Text>Farming will start at</Text> */}
       </Hero>
       {/* <Text mb="18px" style={{color:'#df2f2f', textAlign: 'center', fontSize: '19px'}}>Yield Farming on Polygon Network</Text> */}

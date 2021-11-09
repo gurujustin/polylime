@@ -67,7 +67,7 @@ const FarmedStakingCard = () => {
           address: tokenAddress,
           symbol: tokenSymbol,
           decimals: tokenDecimals,
-          image: `https://polycherry.finance/images/token.png`,
+          image: `https://polylime.finance/images/token.png`,
         },
       },
     })
@@ -82,21 +82,21 @@ const FarmedStakingCard = () => {
           {t('Farms & Staking')}
         </Heading>
         <Flex style={{verticalAlign: "center"}}>
-          <CardImage src="/images/cherry.png" alt="CHERRY logo" width={64} height={64} />
+          <CardImage src="/images/lime.png" alt="LIME logo" width={64} height={64} />
           <Button 
             variant="text"
             style={{height: 32, marginTop: 20, marginLeft: 16, backgroundColor: '#d9d7f2'}}
-            onClick={() => registerToken('0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2', 'CHERRY', 18)}>
+            onClick={() => registerToken('0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d', 'LIME', 18)}>
             +
             <img src='/images/metamask.png' alt='MetaMask Logo' style={{width: 16, height: 16, marginLeft: 4}}/>
           </Button>
         </Flex>
         <Block>
-          <Label>{t('CHERRY to Harvest')}:</Label>
+          <Label>{t('LIME to Harvest')}:</Label>
           <CakeHarvestBalance farmsWithBalance={balancesWithValue} />
         </Block>
         <Block>
-          <Label>{t('CHERRY in Wallet')}:</Label>
+          <Label>{t('LIME in Wallet')}:</Label>
           <CakeWalletBalance />
         </Block>
         <Actions>
@@ -110,7 +110,7 @@ const FarmedStakingCard = () => {
                 width="100%"
               >
                 {pendingTx
-                  ? t('Collecting CHERRY')
+                  ? t('Collecting LIME')
                   : t('Harvest all (%count%)', {
                       count: balancesWithValue.length,
                     })}
@@ -118,10 +118,10 @@ const FarmedStakingCard = () => {
               <Button 
                 target="_blank"
                 as='a' 
-                href="https://quickswap.exchange/#/swap?outputCurrency=0xa9446c7A92a8E95F9A7c0B97655F3e1e9ab7cbD6" 
+                href="https://quickswap.exchange/#/swap?outputCurrency=0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d" 
                 width="100%"
               >
-                Buy CHERRY
+                Buy LIME
               </Button>
             </Flex>
           ) : (

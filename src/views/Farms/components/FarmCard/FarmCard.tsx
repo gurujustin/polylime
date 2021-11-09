@@ -106,6 +106,7 @@ interface FarmCardProps {
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePrice, account }) => {
+  console.log('debug4', farm)
   const { t } = useTranslation()
   let formattedAPR
   if (displayApr) {
@@ -138,7 +139,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePric
       ? `$${farm.liquidity.toNumber().toLocaleString(undefined, { maximumFractionDigits: 2 })}`
       : `$0`
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : t('CHERRY')
+  const earnLabel = farm.dual ? farm.dual.earnLabel : t('LIME')
 
   const liquidityUrlPathParts = getLiquidityUrlPathParts({
     quoteTokenAddress: farm.quoteToken.address,
@@ -157,7 +158,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePric
   }
 
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
-  const isPromotedFarm = farm.token.symbol === 'CHERRY'
+  const isPromotedFarm = farm.token.symbol === 'LIME'
   const depositFee = new BigNumber(farm.depositFee).div(100);
   return (
     <FCard isPromotedFarm={isPromotedFarm}>

@@ -92,7 +92,7 @@ export interface CakeVault {
   pricePerFullShare?: string
   totalCakeInVault?: string
   estimatedCakeBountyReward?: string
-  totalpendingCherryHarvest?: string
+  totalpendingLimeHarvest?: string
   fees?: VaultFees
   userData?: VaultUser
 }

@@ -166,7 +166,7 @@ const Farms: React.FC<TypeFarmProps> = ({modeSingleToken}) => {
           return farm
         }
      
-       const  price = prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
+       const  price = farm.pid === 0 ? cakePrice : prices[farm.quoteToken.address[137].toLocaleLowerCase('en-US')].priceUSD
         
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(price)
 
@@ -394,7 +394,7 @@ const Farms: React.FC<TypeFarmProps> = ({modeSingleToken}) => {
          
         </Heading>
         <Heading scale="lg" color="text">
-          {modeSingleToken ? 'Stake tokens to earn CHERRY' : t('Stake LP tokens to earn CHERRY')}
+          {modeSingleToken ? 'Stake tokens to earn LIME' : t('Stake LP tokens to earn LIME')}
         </Heading>
       
       </PageHeader>

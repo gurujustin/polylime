@@ -63,7 +63,7 @@ export const usePollCoreFarmData = () => {
   const { fastRefresh } = useRefresh()
 
   useEffect(() => {
-    dispatch(fetchFarmsPublicDataAsync([3, 22]))
+    dispatch(fetchFarmsPublicDataAsync([2, 17]))
   }, [dispatch, fastRefresh])
 }
 
@@ -207,7 +207,7 @@ export const useCakeVault = () => {
     pricePerFullShare: pricePerFullShareAsString,
     totalCakeInVault: totalCakeInVaultAsString,
     estimatedCakeBountyReward: estimatedCakeBountyRewardAsString,
-    totalpendingCherryHarvest: totalpendingCherryHarvestAsString,
+    totalpendingLimeHarvest: totalpendingLimeHarvestAsString,
     fees: { performanceFee, callFee, withdrawalFee, withdrawalFeePeriod },
     userData: {
       isLoading,
@@ -222,9 +222,9 @@ export const useCakeVault = () => {
     return new BigNumber(estimatedCakeBountyRewardAsString)
   }, [estimatedCakeBountyRewardAsString])
 
-  const totalpendingCherryHarvest = useMemo(() => {
-    return new BigNumber(totalpendingCherryHarvestAsString)
-  }, [totalpendingCherryHarvestAsString])
+  const totalpendingLimeHarvest = useMemo(() => {
+    return new BigNumber(totalpendingLimeHarvestAsString)
+  }, [totalpendingLimeHarvestAsString])
 
   const totalShares = useMemo(() => {
     return new BigNumber(totalSharesAsString)
@@ -251,7 +251,7 @@ export const useCakeVault = () => {
     pricePerFullShare,
     totalCakeInVault,
     estimatedCakeBountyReward,
-    totalpendingCherryHarvest,
+    totalpendingLimeHarvest,
     fees: {
       performanceFee,
       callFee,
@@ -433,15 +433,15 @@ export const useAchievements = () => {
 }
 
 export const usePriceBnbBusd = (): BigNumber => {
-  const bnbBusdFarm = useFarmFromPid(22)
+  const bnbBusdFarm = useFarmFromPid(17)
   // return new BigNumber(bnbBusdFarm.quoteToken.busdPrice)
   return bnbBusdFarm.tokenPriceVsQuote ? new BigNumber(bnbBusdFarm.tokenPriceVsQuote) : new BigNumber(0)
 }
 
 export const usePriceCakeBusd = (): BigNumber => {
   const prices=  useGetApiPrices();
-  const cakeUsdcFarm = useFarmFromPid(2)
-  return prices ? new BigNumber(prices[tokens.cake.address[137].toLocaleLowerCase('en-US')].priceUSD) : new BigNumber(cakeUsdcFarm.tokenPriceVsQuote);
+  const cakeUsdcFarm = useFarmFromPid(1)
+  return  cakeUsdcFarm.tokenPriceVsQuote ? new BigNumber(cakeUsdcFarm.tokenPriceVsQuote) : new BigNumber(0)
   // return cakeBnbFarm.tokenPriceVsQuote ? new BigNumber(cakeBnbFarm.tokenPriceVsQuote) : new BigNumber(0)
 }
 

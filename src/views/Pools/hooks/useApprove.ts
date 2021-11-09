@@ -44,7 +44,7 @@ export const useApprovePool = (lpContract: Contract, sousId, earningTokenSymbol)
   return { handleApprove, requestedApproval }
 }
 
-// Approve CHERRY auto pool
+// Approve LIME auto pool
 export const useVaultApprove = (setLastUpdated: () => void) => {
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { t } = useTranslation()
@@ -57,7 +57,7 @@ export const useVaultApprove = (setLastUpdated: () => void) => {
     setRequestedApproval(true)
     const receipt = await tx.wait()
     if (receipt.status) {
-      toastSuccess(t('Contract Enabled'), t('You can now stake in the %symbol% vault!', { symbol: 'CHERRY' }))
+      toastSuccess(t('Contract Enabled'), t('You can now stake in the %symbol% vault!', { symbol: 'LIME' }))
       setLastUpdated()
       setRequestedApproval(false)
     } else {

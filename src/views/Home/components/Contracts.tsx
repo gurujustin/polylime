@@ -27,19 +27,19 @@ const Contracts = () => {
         </Heading>
         <Row>
           <Text fontSize="14px">MasterChef</Text>
-          <LinkExternal href="https://polygonscan.com/address/0x5DBCEC02F375Ef4885E0Af1F97b3F7adC9C0D196#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0x5DBCEC02F375Ef4885E0Af1F97b3F7adC9C0D196</LinkExternal>
+          <LinkExternal href="https://polygonscan.com/address/0x55181c30B620bbE2ac5E7f28fbB5458515DCbA05#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0x55181c30B620bbE2ac5E7f28fbB5458515DCbA05</LinkExternal>
         </Row>
         <Row>
-          <Text fontSize="14px">PolyCherry</Text>
-          <LinkExternal href="https://polygonscan.com/address/0xa9446c7A92a8E95F9A7c0B97655F3e1e9ab7cbD6#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0xa9446c7A92a8E95F9A7c0B97655F3e1e9ab7cbD6</LinkExternal>
+          <Text fontSize="14px">PolyLime</Text>
+          <LinkExternal href="https://polygonscan.com/address/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d</LinkExternal>
         </Row>
         <Row>
           <Text fontSize="14px">AutoVault</Text>
-          <LinkExternal href="https://polygonscan.com/address/0x6C8cf34d768928C29B4067946bb704eB07296Ec7#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0x6C8cf34d768928C29B4067946bb704eB07296Ec7</LinkExternal>
+          <LinkExternal href="https://polygonscan.com/address/0xA85156010734480D3F6AEF28a462f020D8116E94#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0xA85156010734480D3F6AEF28a462f020D8116E94</LinkExternal>
         </Row>
         <Row>
           <Text fontSize="14px">TimeLock</Text>
-          <LinkExternal href="https://polygonscan.com/address/0x8c1528260952724ca25b13E4CbFB1D0DC04a61a8#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0x8c1528260952724ca25b13E4CbFB1D0DC04a61a8</LinkExternal>
+          <LinkExternal href="https://polygonscan.com/address/0xaa6Cf3Af2fdD86940452cfD1cCb34b66AA351d3e#readContract" style={{fontWeight: 500, fontSize: '14px', wordBreak: 'break-all'}}>0xaa6Cf3Af2fdD86940452cfD1cCb34b66AA351d3e</LinkExternal>
         </Row>
         {/* <Row>
           <Text fontSize="14px">Timelock</Text>

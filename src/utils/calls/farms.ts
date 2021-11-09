@@ -25,21 +25,21 @@ export const stakeFarm = async (masterChefContract, pid, amount) => {
   } else {
     ref = "0x0000000000000000000000000000000000000000"
   }
-  if (pid === 11 || pid === 13) {
+  if (pid === 6 || pid === 8) {
     value = new BigNumber(amount).times(BIG_TEN.pow(6)).toString()
-  } else if (pid === 9) {
+  } else if (pid === 4) {
     value = new BigNumber(amount).times(BIG_TEN.pow(8)).toString()
   }
-  const tx = await masterChefContract.deposit(pid, value)
+  const tx = await masterChefContract.deposit(pid, value, ref)
   const receipt = await tx.wait()
   return receipt.status
 }
 
 export const unstakeFarm = async (masterChefContract, pid, amount) => {
   let value = new BigNumber(amount).times(DEFAULT_TOKEN_DECIMAL).toString()
-  if (pid === 11 || pid === 13) {
+  if (pid === 6 || pid === 8) {
     value = new BigNumber(amount).times(BIG_TEN.pow(6)).toString()
-  } else if (pid === 9) {
+  } else if (pid === 4) {
     value = new BigNumber(amount).times(BIG_TEN.pow(8)).toString()
   }
 
@@ -63,7 +63,7 @@ export const harvestFarm = async (masterChefContract, pid) => {
     ref = "0x0000000000000000000000000000000000000000"
   }
 
-  const tx = await masterChefContract.deposit(pid, '0')
+  const tx = await masterChefContract.deposit(pid, '0', ref)
   const receipt = await tx.wait()
   return receipt.status
 }

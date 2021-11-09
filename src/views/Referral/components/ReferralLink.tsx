@@ -66,13 +66,13 @@ justify-content: space-between;
             <CardHeader>
                 <Container>
                         <Heading color="success" scale="lg">Your Referral Link</Heading>
-                        <CopyToClipboard text={`https://polylime.com/?ref=${rot13(account)}`} onCopy={()=> {handleClick()}}>
+                        <CopyToClipboard text={`https://polylime.finance/?ref=${rot13(account)}`} onCopy={()=> {handleClick()}}>
                         <Button variant="primary" mt="8px">Copy</Button>
                     </CopyToClipboard>
                 </Container>
             </CardHeader>
             <StyledFooter >
-                <StyledLink style={{"margin":"auto", wordBreak: "break-all"}}>{`https://polylime.com/?ref=${rot13(account)}`}</StyledLink>
+                <StyledLink style={{"margin":"auto", wordBreak: "break-all"}}>{`https://polylime.finance/?ref=${rot13(account)}`}</StyledLink>
             </StyledFooter>
             <ToastContainer toasts={toasts} onRemove={handleRemove} />
         </div>

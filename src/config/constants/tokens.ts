@@ -4,19 +4,10 @@ const tokens = {
     projectLink: 'https://www.binance.com/',
   },
   cake: {
-    symbol: 'CHERRY',
+    symbol: 'LIME',
     address: {
       // 137: '0xc82f37ca0f011acb2bcd90a6f294e16ebd2e66d8',
-      137: '0x64210822e0e260E76DBA23E89F1b0b5E0A37c2b2',
-      97: '',
-    },
-    decimals: 18,
-    projectLink: 'https://quickswap.exchange/#/swap',
-  },
-  nuts: {
-    symbol: 'NUTS',
-    address: {
-      137: '0xf28CA9d779CA6A1945A85Ac50bdB7Dd5D0038c1F',
+      137: '0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
       97: '',
     },
     decimals: 18,
