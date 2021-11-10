@@ -89,16 +89,16 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'Dappradar',
-        href: 'https://dappradar.com/polygon/defi/polylime',
+        href: 'https://polylime.finance',
       },
       {
-        label: 'PolyPup UI',
-        href: 'https://ui.polypup.finance/address/0x62ba727e2449ee3be0573b4b102d7090c5977bfb',
+        label: 'FarmScan',
+        href: 'https://polylime.finance',
       },
       
       {
-        label: 'VFAT',
-        href: 'https://vfat.tools/polygon/polylime',
+        label: 'Ape O Clock',
+        href: 'https://polylime.finance',
       },
      
     ],
