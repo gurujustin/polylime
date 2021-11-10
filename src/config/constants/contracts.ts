@@ -2,7 +2,7 @@ export default {
   masterChef: {
     97: '',
     // 137: '0x95d5aa8d80bBd9c1178DF312B4B742cbC66AA467',
-    137: '0x55181c30B620bbE2ac5E7f28fbB5458515DCbA05',
+    137: '0xfFFb1781422CC18Ab5786E3DBD55D7C91f9E5d9D',
   },
   sousChef: {
     97: '',
@@ -59,7 +59,7 @@ export default {
   },
   cakeVault: {
     // 137: '0xD54Dc79256fBA103939b1bddF28e7a9B2289F03C',
-    137: '0xA85156010734480D3F6AEF28a462f020D8116E94',
+    137: '0xe3427702c18CB241521e255798aC570695BcecdA',
     97: '',
   },
   predictions: {
@@ -80,7 +80,7 @@ export default {
   },
   referral: {
     // 137: '0xcfb0c79ed225e2da3b93e4b7e20df568874bf28d', 
-    137: '0xFaaa3ED1890503e340117BDFec6d66771d9d96eF',// referral
+    137: '0x4E4b149c226446f2d847A8809e7Ec931E1A4Dd6D',// referral
     97: '',
   },
 }

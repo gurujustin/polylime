@@ -9,7 +9,7 @@ const farms: FarmConfig[] = [
 		pid:0,
 		lpSymbol:'LIME',
 		lpAddresses: {
-			137:'0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d', // LIME
+			137:'0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E', // LIME
 			97:'',
 		},
 		quoteToken: tokens.cake,
@@ -188,7 +188,7 @@ const farms: FarmConfig[] = [
 		lpSymbol:'LIME-USDC',
 		lpAddresses: {
 			97:'',
-			137:'0xB7E6eA51BFd3034D8E5d993DccF594b2D4f35ea8',
+			137:'0x6FCaeEB595ffd1Dd90355FC4A8ff802EE15e1D0A',
 			// 137:'0x03cCDcfa920E7954Fd682051D0DA6caf1781A397',
 		},
 		quoteToken: tokens.usdc,
@@ -200,7 +200,7 @@ const farms: FarmConfig[] = [
 		lpSymbol:'LIME-WMATIC',
 		lpAddresses: {
 			97:'',
-			137:'0xA512914F6524c2a9aEc51a5bD66179a72CCa4838',
+			137:'0xD5E31aa72D73f1CC96673c1335F56075d1738B62',
 			//   137:'0x3e56b1c468a2b77e1201507caEe9CCe3CfAcFC45',
 		},
 		quoteToken: tokens.wbnb,
@@ -230,7 +230,7 @@ const farms: FarmConfig[] = [
 		exchange: 'QuickSwap'
 	 },
 	 {
-		pid:20, // 19
+		pid:19, 
 		lpSymbol:'WBTC-USDC',
 		lpAddresses: {
 			97:'',
@@ -241,7 +241,7 @@ const farms: FarmConfig[] = [
 		exchange: 'QuickSwap'
 	 },
 	 {
-		pid:21, // 20
+		pid:20, 
 		lpSymbol:'USDT-USDC',
 		lpAddresses: {
 			97:'',
@@ -252,7 +252,7 @@ const farms: FarmConfig[] = [
 		exchange: 'QuickSwap'
 	 },
 	 {
-		pid:19, // 21
+		pid:21, 
 		lpSymbol:'miMATIC-USDC',
 		lpAddresses: {
 			97:'',

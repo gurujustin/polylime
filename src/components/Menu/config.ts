@@ -27,11 +27,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: "Exchange",
-        href: "https://quickswap.exchange/#/swap?outputCurrency=0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d",
+        href: "https://quickswap.exchange/#/swap?outputCurrency=0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E",
       },
       {
         label: "Liquidity",
-        href:"https://quickswap.exchange/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d"
+        href:"https://quickswap.exchange/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E"
       },
      
     ],
@@ -67,19 +67,19 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'QuickChart',
-        href: 'https://quickchart.app/token/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
+        href: 'https://quickchart.app/token/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E',
       },
       {
         label: 'DexGuru',
-        href: 'https://dex.guru/token/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d-polygon',
+        href: 'https://dex.guru/token/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E-polygon',
       },
       {
         label: 'PolyChart',
-        href: 'https://app.polychart.io/explorer/polygon/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
+        href: 'https://app.polychart.io/explorer/polygon/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E',
       },
       {
         label: 'Poocoin',
-        href: 'https://polygon.poocoin.app/tokens/0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
+        href: 'https://polygon.poocoin.app/tokens/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E',
       },
     ],
   },

@@ -7,7 +7,7 @@ const tokens = {
     symbol: 'LIME',
     address: {
       // 137: '0xc82f37ca0f011acb2bcd90a6f294e16ebd2e66d8',
-      137: '0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d',
+      137: '0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E',
       97: '',
     },
     decimals: 18,

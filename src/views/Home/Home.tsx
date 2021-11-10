@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout, Image } from 'uikit'
+import { Heading, Text, BaseLayout, Image, LinkExternal } from 'uikit'
 import { useQueryParam, StringParam } from 'use-query-params'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
@@ -79,11 +79,8 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Image src={image} alt='logo' width={435} height={100}  />
-        {/* <Heading as="h1" scale="xl" mb="18px" color="secondary" style={{textAlign:'center'}}>
-          PolyLime
-        </Heading>
-        <Text>LIME Token has already been launched</Text>
-        <Text>Farming will start at</Text> */}
+        {/* <Text mt="24px">Token has already been launched</Text> */}
+        <Text mt="12px" mb="12px" style={{display: "flex"}}>Farming starts at <LinkExternal ml="8px" href="https://polygonscan.com/block/countdown/21359436">#21359436</LinkExternal> </Text> 
       </Hero>
       {/* <Text mb="18px" style={{color:'#df2f2f', textAlign: 'center', fontSize: '19px'}}>Yield Farming on Polygon Network</Text> */}
       <div>

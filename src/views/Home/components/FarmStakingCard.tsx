@@ -86,7 +86,7 @@ const FarmedStakingCard = () => {
           <Button 
             variant="text"
             style={{height: 32, marginTop: 20, marginLeft: 16, backgroundColor: '#d9d7f2'}}
-            onClick={() => registerToken('0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d', 'LIME', 18)}>
+            onClick={() => registerToken('0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E', 'LIME', 18)}>
             +
             <img src='/images/metamask.png' alt='MetaMask Logo' style={{width: 16, height: 16, marginLeft: 4}}/>
           </Button>
@@ -118,7 +118,7 @@ const FarmedStakingCard = () => {
               <Button 
                 target="_blank"
                 as='a' 
-                href="https://quickswap.exchange/#/swap?outputCurrency=0x1345726e34e4e0Cd14Ea78f9563451d857A4b90d" 
+                href="https://quickswap.exchange/#/swap?outputCurrency=0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E" 
                 width="100%"
               >
                 Buy LIME
