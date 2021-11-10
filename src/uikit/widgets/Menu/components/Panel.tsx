@@ -47,9 +47,9 @@ const Panel: React.FC<Props> = (props) => {
   return (
     <StyledPanel isPushed={isPushed} showMenu={showMenu}>
       <PanelBody {...props} />
-      {/* <AssureKyc target="_blank" rel="noreferrer" href="https://paladinsec.co/polylime/">
+      <AssureKyc target="_blank" rel="noreferrer" href="https://paladinsec.co/projects/polylime-finance/">
         <img src="/images/audited-by-paladin-standard.png" alt="paladin" />
-      </AssureKyc> */}
+      </AssureKyc>
       <RugDoc target="_blank" rel="noreferrer" href="https://rugdoc.io/project/polylime/">
         <img src="/images/rugdoc-liquiditylock.png" alt="rugdoc" />
       </RugDoc>
