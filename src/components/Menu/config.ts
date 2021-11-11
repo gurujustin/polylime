@@ -93,12 +93,12 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
       },
       {
         label: 'FarmScan',
-        href: 'https://polylime.finance',
+        href: 'https://polygon.farmscan.io/address/0xfFFb1781422CC18Ab5786E3DBD55D7C91f9E5d9D/',
       },
       
       {
         label: 'Ape O Clock',
-        href: 'https://polylime.finance',
+        href: 'https://www.apeoclock.com/launch/polylime-farm-launch/',
       },
      
     ],
