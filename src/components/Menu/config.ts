@@ -59,11 +59,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     icon: 'IfoIcon',
     href: '/poolslime',
   },
-  // {
-  //   label: t('Dividends'),
-  //   icon: 'BondsIcon',
-  //   href: '/dividends',
-  // },
+  {
+    label: t('Dividends'),
+    icon: 'BondsIcon',
+    href: '/dividends',
+  },
   {
     label: t('Referral'),
     icon: 'GroupsIcon',
