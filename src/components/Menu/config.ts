@@ -26,12 +26,20 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     icon: 'TradeIcon',
     items: [
       {
-        label: "Exchange",
+        label: "Exchange(QuickSwap)",
         href: "https://quickswap.exchange/#/swap?outputCurrency=0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E",
       },
       {
-        label: "Liquidity",
+        label: "Liquidity(QuickSwap)",
         href:"https://quickswap.exchange/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E"
+      },
+      {
+        label: "Exchange(JetSwap)",
+        href: "https://polygon-exchange.jetswap.finance/#/swap?outputCurrency=0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E",
+      },
+      {
+        label: "Liquidity(JetSwap)",
+        href:"https://polygon-exchange.jetswap.finance/#/add/0x2791bca1f2de4661ed88a30c99a7a9449aa84174/0x95E0150D37A2b2F0D44eA0a0A0120a3Aca69a41E"
       },
      
     ],
@@ -89,7 +97,7 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     items: [
       {
         label: 'Dappradar',
-        href: 'https://polylime.finance',
+        href: 'https://dappradar.com/polygon/defi/polylime-finance',
       },
       {
         label: 'FarmScan',
