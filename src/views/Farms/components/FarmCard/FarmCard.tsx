@@ -106,6 +106,7 @@ interface FarmCardProps {
 }
 
 const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePrice, account }) => {
+  // console.log('debug4', displayApr)
   const { t } = useTranslation()
   let formattedAPR
   if (displayApr) {

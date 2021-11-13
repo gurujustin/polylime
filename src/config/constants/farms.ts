@@ -184,6 +184,18 @@ const farms: FarmConfig[] = [
   
 	},
 	{
+		pid:24,
+		lpSymbol:'LIME-USDC',
+		lpAddresses: {
+			97:'',
+			137:'0x66998E89E011ab3dD70086b0F44E2d2c8628BB3d',
+			// 137:'0x03cCDcfa920E7954Fd682051D0DA6caf1781A397',
+		},
+		quoteToken: tokens.usdc,
+		token:tokens.cake,
+		exchange: 'JetSwap'
+	},
+	{
 		pid:1,
 		lpSymbol:'LIME-USDC',
 		lpAddresses: {

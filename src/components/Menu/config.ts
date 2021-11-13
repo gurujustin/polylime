@@ -65,6 +65,11 @@ const config: (t: ContextApi['t']) => MenuEntry[] = (t) => [
     href: '/dividends',
   },
   {
+    label: t('Vaults'),
+    icon: 'SunIcon',
+    href: 'https://yieldwolf.finance/polygon/polylime',
+  },
+  {
     label: t('Referral'),
     icon: 'GroupsIcon',
     href: '/referral',
