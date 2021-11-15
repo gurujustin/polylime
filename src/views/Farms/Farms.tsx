@@ -123,7 +123,7 @@ const Farms: React.FC<TypeFarmProps> = ({modeSingleToken}) => {
   const cakePrice = usePriceCakeBusd()
   const [query, setQuery] = useState('')
   const prices = useGetApiPrices()
-  console.log('debug4', prices)
+  // console.log('debug4', prices)
 
   const [viewMode, setViewMode] = usePersistState(ViewMode.CARD, { localStorageKey: 'pancake_farm_view' })
   const { account } = useWeb3React()

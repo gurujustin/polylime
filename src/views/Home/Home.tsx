@@ -79,8 +79,8 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Image src={image} alt='logo' width={435} height={100}  />
-        {/* <Text mt="24px">Token has already been launched</Text> */}
-        <Text mt="12px" mb="12px" style={{display: "flex"}}>Farming starts at <LinkExternal ml="8px" href="https://polygonscan.com/block/countdown/21359436">#21359436</LinkExternal> </Text> 
+        <Text mt="24px">Farming has already been started</Text>
+        {/* <Text mt="12px" mb="12px" style={{display: "flex"}}>Farming starts at <LinkExternal ml="8px" href="https://polygonscan.com/block/countdown/21359436">#21359436</LinkExternal> </Text>  */}
       </Hero>
       {/* <Text mb="18px" style={{color:'#df2f2f', textAlign: 'center', fontSize: '19px'}}>Yield Farming on Polygon Network</Text> */}
       <div>

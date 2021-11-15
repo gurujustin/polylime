@@ -87,6 +87,7 @@ const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
   const { t } = useTranslation()
   const { account } = useActiveWeb3React()
   const balanceInputRef = useRef<HTMLInputElement | null>(null)
+  console.log('debug5', stakingTokenPrice)
 
   const {
     state,
@@ -102,6 +103,7 @@ const RoiCalculatorModal: React.FC<RoiCalculatorModalProps> = ({
 
   const { compounding, activeCompoundingIndex, stakingDuration, editingCurrency } = state.controls
   const { principalAsUSD, principalAsToken } = state.data
+  console.log('debug4', state.data)
 
   // Auto-focus input on opening modal
   useEffect(() => {

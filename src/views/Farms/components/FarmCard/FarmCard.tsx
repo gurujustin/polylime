@@ -188,6 +188,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, displayApr, removed, cakePric
                     cakePrice={cakePrice}
                     apr={farm.apr}
                     displayApr={displayApr}
+                    stakingTokenAddress={farm.token.address[137]}
+                    singleToken={farm.singleToken}
                   />
                   {formattedAPR}%
                 </>
